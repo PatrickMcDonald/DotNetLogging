@@ -2,9 +2,11 @@ using LoggingUtility;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Logging.AddApplicationInsightsLogging(builder.Configuration);
+////builder.Logging.AddApplicationInsightsLogging(builder.Configuration);
 
 // Add services to the container.
+builder.Services.AddApplicationInsightsTelemetry(isDevelopment: builder.Environment.IsDevelopment());
+
 builder.Services.AddControllers();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
