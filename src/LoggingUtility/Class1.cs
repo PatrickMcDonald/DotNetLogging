@@ -1,7 +1,5 @@
-﻿namespace LoggingUtility
-{
-    public class Class1
-    {
+﻿namespace LoggingUtility;
 
-    }
+public class Class1
+{
 }
